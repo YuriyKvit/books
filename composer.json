@@ -1,0 +1,29 @@
+{
+  "name": "asmoria/books",
+  "description": "Test task",
+  "type": "project",
+  "require": {
+    "phpunit/phpunit": "^7.5",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "guzzlehttp/guzzle": "^6.5"
+  },
+  "authors": [
+    {
+      "name": "yuriy.kvit",
+      "email": "asmoteh@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Services\\": "services",
+      "App\\": "app"
+    },
+    "psr-0":{
+      "Tests\\": "tests/"
+    },
+    "files": [
+      "config.php"
+    ]
+  }
+}
