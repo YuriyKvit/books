@@ -5,6 +5,8 @@
 
 `composer install`
 
+`configure db in config.php`
+
 `vendor\bin\phpunit tests`
 
 ###### **Requirements:**
