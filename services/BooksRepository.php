@@ -26,6 +26,26 @@ class BooksRepository
 	}
 
 	/**
+	 * @return array
+	 */
+	public function getAuthors(): array
+	{
+		$sql = 'SELECT * FROM authors';
+		$result = $this->connection->query($sql, PDO::FETCH_ASSOC);
+		return $result->fetchAll();
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getGenres(): array
+	{
+		$sql = 'SELECT * FROM genres';
+		$result = $this->connection->query($sql, PDO::FETCH_ASSOC);
+		return $result->fetchAll();
+	}
+
+	/**
 	 * @param int $id
 	 * @return array
 	 */

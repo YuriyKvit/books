@@ -75,4 +75,24 @@ class BooksController extends BaseApi
 			return error_response($e->getMessage());
 		}
 	}
+
+	public function actionAuthors()
+	{
+		try {
+			$repository = new BooksRepository();
+			return success_response($repository->getAuthors());
+		} catch (\Throwable $e) {
+			return error_response($e->getMessage());
+		}
+	}
+
+	public function actionGenres()
+	{
+		try {
+			$repository = new BooksRepository();
+			return success_response($repository->getGenres());
+		} catch (\Throwable $e) {
+			return error_response($e->getMessage());
+		}
+	}
 }
